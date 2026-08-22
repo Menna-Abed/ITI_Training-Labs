@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MY CSS Live Docs</title>
+    <style>
+        body {
+            background: #f2f2f2;
+            color: black;
+            padding: 20px;
+        } 
+        .snippet-card {
+            background: #1e1e1e;
+            color: white;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .snippet-title {
+            margin-bottom: 15px;
+        }
+        .copy-btn {
+            float: right;
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 5px 12px;
+            cursor: pointer;
+        }
+        .code {
+            background: #111;
+            color: lightgreen;
+            padding: 15px;
+            border: 1px solid #333;
+            white-space: pre;
+        }
+        textarea {
+            width: 95%;
+            height: 120px;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .live-result {
+            background: white;
+            border: 1px dashed gray;
+            padding: 25px;
+            margin-top: 15px;
+        }
+        .preview-box {
+            border: 1px solid #ccc;
+            padding: 15px;
+            background: #fff;
+            width: 200px;
+            text-align: center;
+        }
+        .preview-box button {
+            padding: 7px 12px;
+        }
+         
+    </style> 
+    <style id="liveStyle"></style>
+</head>
+
+<body> 
+    <h1>MY CSS Live Docs</h1> 
+    <h2>CSS Snippets</h2>
+    <div class="snippet-card"> 
+        <span class="snippet-title">
+            Center Content (Flex)
+        </span>
+        <button class="copy-btn">
+            Copy
+        </button>  
+        <div class="code">display: flex;
+    justify-content: center;
+    align-items: center;</div> 
+    </div> 
+    <div class="snippet-card">
+        <span class="snippet-title">
+            Button Hover Effect
+        </span>
+        <button class="copy-btn">
+            Copy
+        </button>
+        <div class="clear"></div>
+        <div class="code">background: #0d6efd;
+    color: white;
+    border: none;
+    transition: 0.3s;</div>
+    </div> 
+
+    <div class="snippet-card">
+
+        <span class="snippet-title">
+            Card Style
+        </span>
+
+        <button class="copy-btn">
+            Copy
+        </button> 
+
+        <div class="code">background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+</div>
+    </div>
+    <h2>Paste Your CSS Here</h2>
+    <textarea  id="cssInput"  placeholder="Write CSS properties here..." >
+    </textarea>
+
+    <h2>Live Result</h2>
+    <div class="live-result">
+        <div class="preview-box" id="preview">
+            <p>
+                This is a preview card
+            </p>
+            <button>
+                Hover me
+            </button>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener("load", function () { 
+            var cssInput =
+                document.getElementById("cssInput"); 
+            var preview =
+                document.getElementById("preview"); 
+
+            cssInput.addEventListener("keyup", function () {
+
+                preview.style.cssText = this.value;
+
+            }); 
+            var copyButtons =
+                document.getElementsByClassName("copy-btn");
+
+            for (var i = 0; i < copyButtons.length; i++) {
+
+                copyButtons[i].addEventListener("click", function () {
+
+                    var parentCard =
+                        this.parentElement; 
+                    var codeBlock =
+                        parentCard.getElementsByClassName("code")[0]; 
+                    navigator.clipboard.writeText(
+                        codeBlock.innerText
+                    ); 
+                    this.innerText = "Copied!"; 
+                    var btn = this; 
+                    setTimeout(function () { 
+                        btn.innerText = "Copy"; 
+                    }, 1000);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

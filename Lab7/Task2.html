@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Students_Task2</title>
+</head>
+<body>
+    <h2>Students</h2>
+    <form>
+    <input type="text" id="search" placeholder="Search by name or course">
+    <br><br> 
+    <select id="sort">
+        <option value="">Sort Students</option>
+        <option value="age">Sort by Age</option>
+        <option value="name">Sort by Name</option>
+    </select> 
+    </form>
+    <br><br> 
+    <table border="1" id="studentTable">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Course</th>
+        </tr>
+    </table>
+    <script>
+        var students = [
+            { name: "Ali", age: 20, Crs: "CS" },
+            { name: "Sara", age: 22, Crs: "Math" },
+            { name: "Omar", age: 19, Crs: "Physics" },
+            { name: "Laila", age: 21, Crs: "CS" },
+            { name: "Hassan", age: 23, Crs: "Engineering" },
+            { name: "Mona", age: 20, Crs: "Biology" },
+            { name: "Kareem", age: 24, Crs: "Math" },
+            { name: "Noor", age: 18, Crs: "CS" }
+        ];
+
+        table = document.querySelector("#studentTable");
+        search = document.querySelector("#search");
+        sort = document.querySelector("#sort");
+ 
+        function displayStudents(arr) {
+
+            table.innerHTML =
+                "<tr>" +
+                "<th>Name</th>" +
+                "<th>Age</th>" +
+                "<th>Course</th>" +
+                "</tr>";
+
+            arr.map(function(elm) { 
+                table.innerHTML +=
+                    "<tr>" +
+                    "<td>" + elm.name + "</td>" +
+                    "<td>" + elm.age + "</td>" +
+                    "<td>" + elm.Crs + "</td>" +
+                    "</tr>"; 
+            });
+        }
+        displayStudents(students);
+        search.addEventListener("keyup", function() {
+            var value = this.value.toLowerCase();
+            var res = students.filter(function(elm) {
+                return elm.name.toLowerCase().includes(value) ||
+                       elm.Crs.toLowerCase().includes(value);
+            });
+            displayStudents(res);
+        });
+        sort.addEventListener("change", function() {
+            if (this.value == "age") {
+
+                students.sort(function(a, b) {
+                    return a.age - b.age;
+                }); 
+            } 
+            else if (this.value == "name") {
+                students.sort(function(a, b) {
+
+                    if (a.name.toLowerCase() > b.name.toLowerCase()) {
+                        return 1;
+                    }
+                    else {
+                        return -1;
+                    } 
+                }); 
+            } 
+            displayStudents(students);
+        });
+    </script>
+</body>
+</html>

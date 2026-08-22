@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Affairs Dashboard</title>
+ <link rel="stylesheet" href="style.css">  
+</head>
+<body> 
+    <h1>Students Affairs Dashboard</h1> 
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <label>Select Student:</label>
+            <select id="studentSelect">
+                <option value="">
+                    -- Choose Student --
+                </option>
+            </select>
+        </div>
+
+        <div class="main-content" id="detailsBox">
+            <h2>Student Details </h2>
+            <form id="studentForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label> First Name</label>
+                        <input type="text" id="fname" >
+                    </div>
+                    <div class="form-group"> <label> Last Name </label>
+                        <input  type="text" id="lname" >
+                    </div>
+
+                    <div class="form-group">
+                        <label> Course </label>
+                         <input type="text" id="crs">
+                    </div>
+
+                    <div class="form-group">
+                        <label> Grade </label> 
+                        <input type="text" id="grade"  > 
+                    </div>
+
+                    <div class="form-group">
+                        <label> Phone  </label>
+                        <input type="text" id="phone"  >
+                    </div>
+                    <div class="form-group">
+                        <label> Email </label>
+                        <input  type="text" id="email" >
+                    </div>
+                </div>
+                <div class="actions">
+                    <button type="submit" class="btn btn-save" > Save Changes </button>
+                    <button  type="button" class="btn btn-delete"  id="deleteBtn" >
+                        Delete Student
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div> 
+<script src="script.js"></script>
+</body>
+</html>

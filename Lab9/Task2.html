@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+ 
+    <title>Task2t</title>
+</head>
+<body>
+    <script>
+
+        const students = [
+    { id: 1, name: "Ali", grade: 80, city: "Cairo" },
+    { id: 2, name: "Sara", grade: 92, city: "Alexandria" },
+    { id: 3, name: "Omar", grade: 74, city: "Giza" },
+    { id: 4, name: "Mona", grade: 88, city: "Cairo" }
+];
+
+function printNames(...names) {
+
+    names.forEach(student => {
+        console.log(student.name);
+    });
+
+} 
+printNames(...students);
+    </script>
+    
+</body>
+</html>

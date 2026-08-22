@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head> 
+    <title>Task1</title>
+</head> 
+<body> 
+    <script> 
+        const students = [
+            { id: 1, name: "Ali", grade: 80, city: "Cairo" },
+            { id: 2, name: "Sara", grade: 92, city: "Alexandria" },
+            { id: 3, name: "Omar", grade: 74, city: "Giza" },
+            { id: 4, name: "Mona", grade: 88, city: "Cairo" }
+        ];
+
+
+        // 1
+        var names = students.map(student => student.name);
+        console.log(names);
+
+
+        // 2
+        var highGrades = students.filter(student => student.grade >= 85);
+        console.log(highGrades);
+
+
+        // 3
+        var sara = students.filter(student => student.name == "Sara");
+        console.log(sara);
+
+
+        // 4
+        var total = students.reduce(
+            (sum, student) => sum + student.grade,
+            0
+        ); 
+        var average = total / students.length; 
+        console.log(average);
+
+
+        // 5
+        var sortedStudents = [...students].sort(
+            (a, b) => b.grade - a.grade
+        ); 
+        console.log(sortedStudents);
+
+
+        // 6
+        students.forEach(student => {
+            console.log(student);
+        });
+
+
+        // 7
+        var studentsCopy = [...students]; 
+        console.log(studentsCopy);
+
+
+        // 8
+        var newStudent = {
+            id: 5,
+            name: "Hassan",
+            grade: 85,
+            city: "Mansoura"
+        };
+
+        var studentsWithNewStudent = [ ...students, newStudent ]; 
+        console.log(studentsWithNewStudent);
+
+
+        // 9
+        var anotherStudents = [
+            {
+                id: 6,
+                name: "Noor",
+                grade: 90,
+                city: "Cairo"
+            },
+            {
+                id: 7,
+                name: "Kareem",
+                grade: 78,
+                city: "Giza"
+            }
+        ];
+
+        var mergedStudents = [ ...students, ...anotherStudents ]; 
+        console.log(mergedStudents);
+
+
+        // 10
+        var updatedStudents = students.map(student => { 
+            if (student.name == "Omar") {
+                return {
+                    ...student,
+                    grade: 95
+                };
+            } 
+            return student;
+        }); 
+        console.log(updatedStudents);
+
+
+        // 11
+        var studentsWithoutSara = [ ...students.filter(student => student.id != 2) ]; 
+        console.log(studentsWithoutSara);
+
+
+        // 12
+        var [firstStudent, ...restStudents] = students; 
+        console.log(firstStudent);
+        console.log(restStudents);
+
+
+        // 13
+        var [first, ...rest] = students; 
+        console.log(first);
+        console.log(rest);
+
+
+        // 14
+        var [, , thirdStudent] = students; 
+        console.log(thirdStudent);
+
+    </script> 
+</body> 
+</html>
