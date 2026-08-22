@@ -1,0 +1,769 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;  
+    color: #434242;
+    background-color: #ffffff;
+}
+
+a {
+    color: #e60012; 
+}
+ 
+table {
+    border-collapse: collapse;
+}
+ 
+
+#headerwrap {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-bottom: 1px solid #efefef;
+    border-radius: 16px 16px 0 0;
+    overflow: hidden;
+}
+ 
+
+#topbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #efefef;
+    height: 64px;
+}
+
+#topbar table {
+    width: 100%;
+    height: 100%;
+}
+
+#logocell {
+    background-color: #e60012;
+    text-align: center;
+    vertical-align: middle;
+    width: 110px;
+    border-top-left-radius: 16px;
+    padding: 0;
+}
+
+#logo {
+    display: inline-block;
+}
+
+.logo-img {
+    width: 90px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#searchcell {
+    padding-left: 24px;
+    vertical-align: middle;
+}
+
+.searchtable {
+    border-bottom: 2px solid #434242;
+    padding-bottom: 4px;
+    width: 440px;
+}
+
+.searchicon {
+    font-size: 18px;
+    color: #434242;
+    padding-right: 8px;
+}
+
+#searchwrap {
+    border: none;
+    padding: 0;
+    width: 100%;
+}
+
+#searchwrap input {
+    border: 0;
+    outline: none;
+    font-size: 16px;
+    width: 100%;
+    color: #434242;
+    background: transparent;
+}
+
+.catlink {
+    color: #434242;
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 10px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+#rightlinks {
+    padding-right: 24px;
+    vertical-align: middle;
+}
+
+.toplink {
+    color: #434242;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0 16px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.toplink:hover {
+    color: #e60012;
+}
+
+.topicon {
+    padding-right: 6px;
+} 
+#navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #efefef;
+}
+
+#navbar table {
+    margin: 0 auto;
+}
+
+#navbar td {
+    padding: 18px 26px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #434242;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+#navbar td.active {
+    color: #e60012;
+    border-bottom: 4px solid #e60012;
+}
+
+.navicon {
+    margin-right: 6px;
+}
+
+.navicon.red {
+    color: #e60012;
+}
+ 
+
+#promo {
+    background-color: #efefef;
+    text-align: center;
+    padding: 14px 0;
+    font-size: 14px;
+    color: #434242;
+    border-bottom: 1px solid #efefef;
+}
+
+#promo a {
+    color: #434242;
+}
+
+#promo a.pointslink {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.promoicon {
+    color: #e60012;
+    padding-right: 6px;
+}
+
+.promodivider {
+    color: #efefef;
+    margin: 0 18px;
+} 
+
+#herowrap {
+    background-color: #d6f0fa; 
+    padding: 50px 0;
+}
+
+#herobox {
+    width: 1320px;
+    margin: 0 auto;  
+    background-color: #ffffff;
+    padding: 40px;
+    border: 1px solid #efefef;
+    border-radius: 16px;
+    position: relative;
+    z-index: 10;
+} 
+
+.breadcrumb {
+    font-size: 14px;
+    color: #434242;
+    padding-bottom: 24px;
+}
+
+.breadcrumb a {
+    color: #434242;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb .current {
+    font-weight: bold;
+}
+ 
+
+.mainimg {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.thumbstrip img.thumb {
+    width: 95px;
+    height: 56px;
+    border-radius: 6px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 3px solid transparent;
+}
+
+.thumbstrip img.thumb.selected,
+.thumbstrip img.thumb:hover {
+    border-color: #d6f0fa;
+}
+
+.thumb-next-cell {
+    background-color: #434242;
+    border-radius: 0 6px 6px 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.thumb-next-btn {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 14px 12px;
+    display: block;
+    font-size: 15px;
+}
+ 
+#platform {
+    font-size: 15px;
+    color: #e60012;
+    border-bottom: 1px solid #efefef;
+    padding-bottom: 10px;
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+#gametitle {
+    font-size: 36px;
+    font-weight: bold;
+    color: #434242;
+    margin-bottom: 24px;
+}
+
+#price {
+    font-size: 32px;
+    font-weight: bold;
+    color: #434242;
+}
+
+.heart {
+    font-size: 32px;
+    color: #e60012;
+    cursor: pointer;
+}
+
+.goldpoints {
+    font-size: 14px;
+    color:  #434242;
+    margin: 18px 0 30px 0;
+}
+
+.coinicon {
+    background-color: #ffb700;
+    color: #ffffff;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 12px;
+    margin-right: 6px;
+}
+
+.buybutton {
+    display: block;
+    background-color: #e60012;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 18px 0;
+    border-radius: 8px;
+    text-decoration: none;
+    border: 1px solid #e60012;
+}
+
+.downloadicon {
+    font-size: 22px;
+    margin-right: 8px;
+}
+
+.downloadnote {
+    font-size: 13px;
+    color: #434242;
+    margin-top: 14px;
+    line-height: 1.5;
+} 
+
+#descwrap {
+    width: 1400px;
+    margin: 45px auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+
+#desctext {
+    width: 660px;
+    vertical-align: top;
+    padding-right: 50px;
+    line-height: 1.7;
+    color: #434242;
+    font-size: 16px;
+}
+
+#desctext p {
+    margin: 0 0 20px 0;
+}
+
+#descimg {
+    width: 660px;
+    height: auto;
+    vertical-align: top;
+}
+
+.descriptionImage {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.readmoreicon {
+    color: #e60012;
+    padding-right: 6px;
+    font-weight: bold;
+} 
+#infoboxwrap {
+    width: 1400px;
+    margin: 0 auto 45px auto;
+}
+
+.infobox {
+    background-color: #f8f8f8;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.box-title {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #484848;
+    text-align: center;
+    margin-bottom: 20px;
+} 
+
+.esrb-inner {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 16px 20px;
+    border: 1px solid #e0e0e0;
+}
+
+.esrbImage {
+    width: 62px;
+    height: auto;
+    display: block;
+}
+
+.esrb-text {
+    font-size: 13px;
+    color: #555555;
+    line-height: 1.5;
+    padding-left: 14px;
+}
+
+.esrb-divider {
+    border-bottom: 1px solid #eeeeee;
+    margin: 10px 0;
+}
+
+.esrb-link {
+    color: #e60012;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.esrb-link:hover {
+    text-decoration: underline;
+}
+ 
+
+.modes-table {
+    margin-top: 8px;
+}
+
+.mode-box {
+    background-color: #0b2b6b;
+    width: 105px;
+    height: 76px;
+    border-radius: 10px;
+    margin: 0 auto 10px auto;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 76px;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.mode-label {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333333;
+    display: block;
+} 
+
+#detailswrap {
+    width: 1400px;
+    margin: 0 auto 45px auto;
+    border-top: 1px solid #e5e5e5;
+}
+
+.detailrow {
+    border-bottom: 1px solid #eeeeee;
+}
+
+.detailrow td {
+    padding: 20px 10px;
+    font-size: 15px;
+    vertical-align: middle;
+}
+
+.detailicon {
+    width: 45px;
+    font-size: 22px;
+    color: #333333;
+    text-align: center;
+}
+
+.detaillabel {
+    width: 280px;
+    font-weight: bold;
+    color: #222222;
+}
+
+.detailrow a {
+    padding-right: 8px;
+}
+ 
+
+.online-banner-container {
+    width: 1400px;
+    margin: 50px auto;
+}
+
+.online-banner {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    display: table;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #e0e0e0;
+}
+
+.banner-content {
+    display: table-cell;
+    vertical-align: middle;
+    width: 55%;
+    padding: 50px;
+}
+
+.banner-image {
+    display: table-cell;
+    vertical-align: bottom;
+    width: 45%;
+    text-align: right;
+}
+
+.banner-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.online-badge {
+    background-color: #e60012;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 6px;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+}
+
+.banner-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+    line-height: 1.4;
+    margin: 0 0 24px 0;
+}
+
+.banner-supports {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 30px;
+}
+
+.red-link {
+    color: #e60012;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 0 8px;
+}
+
+.learn-more-btn {
+    display: inline-block;
+    background-color: #e60012;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 17px;
+    padding: 16px 32px;
+    border-radius: 6px;
+     
+}
+ 
+
+#recentwrap {
+    width: 1400px;
+    margin: 0 auto 60px auto;
+}
+
+#recentwrap h2 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 24px;
+}
+
+.productcard {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding-bottom: 18px;
+    vertical-align: top;
+    width: 23%;
+    overflow: hidden;
+}
+
+.card-image-wrap {
+    position: relative;
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+}
+
+.gameimg {
+    width: 100%;
+    height: 190px;
+    display: block;
+}
+
+.cardflag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #e60012;  
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px 0;
+    
+}
+
+.cardflag.blue {
+    background-color: #0066cc;  
+}
+
+.cardtitle {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333333;
+    padding: 14px 14px 8px 14px;
+    line-height: 1.3;
+    height: 44px;
+    overflow: hidden;
+}
+
+.cardpricerow {
+    padding: 0 14px;
+    margin-top: 12px;
+}
+
+.cardprice {
+    font-weight: bold;
+    font-size: 17px;
+    color: #333333;
+}
+
+.cardoldprice {
+    font-size: 13px;
+    color: #999999;
+    text-decoration: line-through;
+}
+
+.saleflag {
+    background-color: #e60012;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 6px;
+    border-radius: 3px;
+}
+
+.cardheart {
+    color: #e60012;
+    font-size: 20px;
+    padding: 0 14px;
+    cursor: pointer;
+}
+
+.cardplatform {
+    padding: 12px 14px 0 14px;
+    font-size: 13px;
+}
+
+.cardplatform a {
+    color: #e60012;
+    text-decoration: underline;
+    font-weight: bold;
+}
+ 
+#footerlegal {
+    width: 1400px;
+    margin: 0 auto;
+    font-size: 13px;
+    color: #999999;
+    padding-bottom: 30px;
+    line-height: 1.7;
+}
+
+.footer-container {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+#footerbrand {
+    background-color: #e60012;
+    padding: 22px 0;
+}
+
+.footer-logo-img {
+    height: 75px;
+    display: block;
+}
+
+.social-icon {
+    color: #ffffff;
+    font-size: 25px;
+    margin-left: 24px;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.social-icon:hover {
+    opacity: 0.8;
+}
+
+#footerlinks {
+    background-color: #ffffff;
+    padding: 50px 0 60px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+#footerlinks table {
+    width: 100%;
+}
+
+.footer-col {
+    vertical-align: top;
+    padding: 0 24px;
+    border-right: 1px solid #eeeeee;
+    width: 16.66%;
+}
+
+.footer-col.first-col {
+    padding-left: 0;
+}
+
+.footer-col.no-border {
+    border-right: none;
+    padding-right: 0;
+}
+
+#footerlinks h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 18px 0;
+    color: #333333;
+}
+
+#footerlinks a {
+    display: block;
+    color: #e60012;
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 12px; 
+}
+
+#footerlinks a:hover {
+    text-decoration: underline;
+}
+
+#bottombar {
+    background-color: #1a1a1a;
+    color: #999999;
+    font-size: 13px;
+    padding: 22px 0;
+}
+
+#bottombar table {
+    width: 100%;
+}
+
+#bottombar td {
+    vertical-align: middle;
+}
+
+#bottombar a {
+    color: #999999;
+    font-weight: bold; 
+    padding-left: 20px;
+}
+
+#bottombar a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+ 
+ 
