@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 1</title>
+</head>
+<body>
+<script>
+
+    var str = "Welcome to js";
+
+    var index = 0;
+
+    var ref = open("", "childwin", "width=300,height=300");
+
+    var timerId = setInterval(function () {
+
+        if (index < str.length) {
+            ref.document.write(str[index]);
+            index++;
+        }
+        else {
+            clearInterval(timerId);
+            ref.close();
+        }
+    }, 500);
+
+</script>
+</body>
+</html>

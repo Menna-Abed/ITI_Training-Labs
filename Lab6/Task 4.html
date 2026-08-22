@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login Task 4</title>
+</head>
+
+<body>
+<form action=".\Task 4.html">
+
+    <input type="text" name="usr" placeholder="Enter User Name">
+    <br><br>
+    <input type="password" name="pass" placeholder="Enter Password">
+    <br><br>
+    <input type="submit" value="Login">
+
+</form>
+
+<script>
+
+    params = new URLSearchParams(location.search)
+
+    var username = params.get("usr")
+    var password = params.get("pass")
+
+    if (username == "ali" && password == "123") {
+
+        ref = open("", "childwin", "width=300,height=300")
+        ref.document.write("welcome ya ali")
+        ref.document.fgColor = "red"
+
+    }
+
+    else if (username != null && password != null) {
+        ref = open("", "childwin", "width=300,height=300")
+        ref.document.write("Error")
+    }
+
+</script>
+</body>
+</html>
