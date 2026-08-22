@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Person_Task1</title>
+</head>
+<body>
+<script>
+    class Person {
+        constructor(_name, _age) {
+            this.name = _name;
+            this.age = _age;
+        }
+
+        introduce() {
+            return `Name: ${this.name}, Age: ${this.age}`;
+        }
+    }
+
+    class Teacher extends Person {
+        constructor(_name, _age, _subject) {
+            super(_name, _age);
+            this.subject = _subject;
+        }
+        teach() {
+            return `${this.name} is teaching ${this.subject}`;
+        }
+        introduce() {
+            return `Teacher: ${this.name}, Age: ${this.age}, Subject: ${this.subject}`;
+        }
+    }
+
+    class Student extends Person {
+        constructor(_name, _age, _major) {
+            super(_name, _age);
+            this.major = _major;
+        }
+        study() {
+            return `${this.name} is studying ${this.major}`;
+        }
+        introduce() {
+            return `Student: ${this.name}, Age: ${this.age}, Major: ${this.major}`;
+        }
+    }
+    let teacher = new Teacher("Ahmed", 35, "JavaScript");
+    let student = new Student("Sara", 20, "Computer Science");
+
+    document.write(teacher.introduce() + "<br>");
+    document.write(teacher.teach() + "<br><br>");
+
+    document.write(student.introduce() + "<br>");
+    document.write(student.study());
+
+</script>
+</body>
+</html>

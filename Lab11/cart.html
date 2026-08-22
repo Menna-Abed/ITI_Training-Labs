@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <title>Cart</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 30px;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+        }
+        #cart {
+            margin-bottom: 20px;
+        }
+        .cart-item {
+            padding: 15px;
+            margin: 15px 0;
+            border: 1px solid #ccc;
+            background-color: white;
+        }
+        .cart-item img {
+            width: 100px;
+            height: 120px;
+        }
+        .cart-item h3 {
+            font-size: 15px;
+        }
+        .cart-item p {
+            font-size: 14px;
+        }
+        button {
+            padding: 8px;
+            margin: 5px;
+            border: none;
+            color: white;
+            background-color: #ff0015;
+            border-radius: 15px;
+        }
+        button:last-child {
+            border-radius: 15px;
+            background-color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Cart</h1>
+    <div id="cart"></div>
+    <button onclick="purchaseCart()">
+        Purchase Cart
+    </button>
+    <button onclick="continueShopping()">
+        Continue Shopping
+    </button>
+    <script src="cart.js"></script>
+
+</body>
+</html>
